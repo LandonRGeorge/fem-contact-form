@@ -1,0 +1,214 @@
+:root {
+    --grey-900: #2A4144;
+    --grey-500: #86A2A5;
+    --white: #FFFFFF;
+    --green-600: #0C7D69;
+    --green-200: #E0F1E8;
+    --red: #D73C3C;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: initial;
+}
+
+* {
+    font-family: Karla, serif;
+}
+
+body {
+    background-color: var(--green-200);
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+form {
+    width: 600px;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    margin: 20px;
+}
+
+@media(max-width: 700px) {
+    form {
+        width: 300px;
+    }
+}
+
+.error {
+    color: red;
+    margin-top: .3rem;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background-color: var(--green-600);
+    border: none;
+    padding: 1rem 0;
+    border-radius: 5px;
+    color: var(--white);
+}
+
+.success {
+    position: absolute;
+    background-color: var(--grey-900);
+    left: 2rem;
+    right: 2rem;
+    border-radius: 5px;
+    color: var(--white);
+    top: -4rem;
+    padding: 1rem;
+}
+
+@media(max-width: 700px) {
+    .success {
+        top: -5rem;
+    }
+}
+
+.container {
+    position: relative;
+}
+
+form > * {
+    grid-column: span 2;
+}
+
+.fname {
+    grid-column: 1;
+    display: grid;
+}
+
+@media(max-width: 700px) {
+    .fname {
+        grid-column: span 2;
+    }
+}
+
+.lname {
+    grid-column: 2;
+    display: grid;
+}
+
+@media(max-width: 700px) {
+    .lname {
+        grid-column: span 2;
+    }
+}
+
+.email {
+    display: grid;
+}
+
+.query-type {
+    display: grid;
+    border: none;
+}
+
+.message {
+    display: grid;
+}
+
+textarea {
+    resize: none;
+}
+
+input, textarea {
+    padding: .5rem;
+    border-radius: 5px;
+    border: 1px solid var(--grey-500);
+}
+
+.query-type-control {
+    border: 1px solid var(--grey-500);
+    border-radius: 5px;
+    padding: .75rem;
+}
+
+.names, .query-type-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+}
+
+@media(max-width: 700px) {
+    .names, .query-type-controls {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+h1 {
+    font-size: 1.76rem;
+    font-weight: 600;
+}
+
+.is-required::after {
+    content: " *";
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+button, .query-type-control, .consent {
+    cursor: pointer;
+}
+
+.query-type-control *, .consent * {
+    cursor: inherit;
+}
+
+.consent-control input[type="checkbox"] {
+    margin-right: .5rem;
+    accent-color: var(--green-600);
+}
+
+@media(max-width: 700px) {
+    .consent-control{
+        display: flex;
+    }
+}
+
+label, legend {
+    margin-bottom: .3rem;
+    color: var(--grey-900);
+}
+
+.query-type-selected {
+    background-color: var(--green-200);
+}
+
+.query-type-selected > input {
+    accent-color: var(--green-600);
+}
+
+.error-border {
+    border-color: red;
+}
+
+@font-face {
+    font-family: Karla;
+    src: url('/assets/fonts/static/Karla-Regular.ttf');
+}
+
+
+

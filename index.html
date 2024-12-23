@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="./script.js"></script>
+  <title>Contact form</title>
+</head>
+<body>
+<div class="container">
+  <form action="">
+    <h1>Contact Us</h1>
+
+    <div class="names">
+      <div class="fname">
+        <label for="fname" class="is-required">First Name</label>
+        <input type="text" id="fname" name="fname">
+      </div>
+
+      <div class="lname">
+        <label for="lname" class="is-required">Last Name</label>
+        <input type="text" id="lname" name="lname">
+      </div>
+    </div>
+
+    <div class="email">
+      <label for="email" class="is-required">Email Address</label>
+      <input type="email" id="email" name="email">
+    </div>
+
+
+    <fieldset class="query-type">
+      <legend class="is-required">Query Type</legend>
+      <div class="query-type-controls">
+        <div class="query-type-control">
+          <input type="radio" name="query-type" value="general-enquiry" id="general-enquiry">
+          <label for="general-enquiry">General Enquiry</label>
+        </div>
+        <div class="query-type-control">
+          <input type="radio" name="query-type" value="support-request" id="support-request">
+          <label for="support-request">Support Request</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="message">
+      <label for="message" class="is-required">Message</label>
+      <textarea name="message" id="message" cols="30" rows="5"></textarea>
+    </div>
+    <div class="consent">
+      <div class="consent-control">
+        <input type="checkbox" id="consent" name="consent">
+        <label for="consent" class="is-required">I consent to being contacted by the team</label>
+      </div>
+    </div>
+
+    <button formnovalidate>Submit</button>
+  </form>
+</div>
+</body>
+</html>
